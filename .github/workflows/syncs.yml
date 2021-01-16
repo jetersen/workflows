@@ -1,0 +1,16 @@
+name: Workflow Sync
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  file-syncs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running Workflow Sync
+        uses: jetersen/ghaction.file.sync@main
+        with:
+          appId: ${{ secrets.APP_ID }}
+          privateKey: ${{ secrets.APP_PEM }}

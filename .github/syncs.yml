@@ -1,0 +1,8 @@
+syncs:
+  - repos:
+      - jetersen/ghaction.file.sync
+      - jetersen/express-ipfilter
+    files:
+      - src: .github/labels.yml
+      - src: workflows/labels.yml
+        dest: .github/workflows/labels.yml
